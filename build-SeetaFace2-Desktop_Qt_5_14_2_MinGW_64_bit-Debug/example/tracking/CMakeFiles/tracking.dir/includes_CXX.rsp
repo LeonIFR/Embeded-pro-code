@@ -1,0 +1,1 @@
+-IH:/MCU/SeetaFace2/example/tracking -IH:/MCU/SeetaFace2/SeetaNet/include -IH:/MCU/SeetaFace2/FaceTracker/include -isystem H:/MCU/CMAKE_INSTALL_PREFIX/include

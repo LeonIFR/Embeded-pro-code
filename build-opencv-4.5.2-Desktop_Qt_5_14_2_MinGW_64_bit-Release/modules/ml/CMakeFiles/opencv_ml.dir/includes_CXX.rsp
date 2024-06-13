@@ -1,0 +1,1 @@
+-I"H:/MCU/opencv-4.5.2/modules/ml/include" -I"H:/MCU/build-opencv-4.5.2-Desktop_Qt_5_14_2_MinGW_64_bit-Release/modules/ml" -I"H:/MCU/opencv-4.5.2/modules/core/include" -isystem "H:/MCU/build-opencv-4.5.2-Desktop_Qt_5_14_2_MinGW_64_bit-Release"

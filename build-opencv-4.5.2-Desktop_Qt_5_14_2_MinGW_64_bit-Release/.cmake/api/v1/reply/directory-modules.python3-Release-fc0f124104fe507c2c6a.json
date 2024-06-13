@@ -1,0 +1,148 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"include"
+		],
+		"files" : 
+		[
+			"modules/python/python_loader.cmake",
+			"modules/python/common.cmake",
+			"modules/python/python3/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 153,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 37,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 175,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 220,
+				"parent" : 2
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 5,
+			"component" : "python",
+			"destination" : "H:/Anaconda/Lib/site-packages/cv2",
+			"paths" : 
+			[
+				"modules/python/package/cv2/__init__.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "python",
+			"destination" : "H:/Anaconda/Lib/site-packages/cv2",
+			"paths" : 
+			[
+				"modules/python/package/cv2/load_config_py2.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "python",
+			"destination" : "H:/Anaconda/Lib/site-packages/cv2",
+			"paths" : 
+			[
+				"modules/python/package/cv2/load_config_py3.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "python",
+			"destination" : "H:/Anaconda/Lib/site-packages/cv2",
+			"paths" : 
+			[
+				"H:/MCU/build-opencv-4.5.2-Desktop_Qt_5_14_2_MinGW_64_bit-Release/CMakeFiles/install/python_loader//cv2/config.py"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "python",
+			"destination" : "H:/Anaconda/Lib/site-packages/cv2/python-3.10",
+			"paths" : 
+			[
+				"lib/python3/cv2.cp310-win_amd64.pyd"
+			],
+			"targetId" : "opencv_python3::@0bf1395c812e247102d0",
+			"targetIndex" : 43,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "python",
+			"destination" : "H:/Anaconda/Lib/site-packages/cv2",
+			"paths" : 
+			[
+				"H:/MCU/build-opencv-4.5.2-Desktop_Qt_5_14_2_MinGW_64_bit-Release/CMakeFiles/install/python_loader//cv2/config-3.10.py"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "modules/python3",
+		"source" : "modules/python/python3"
+	}
+}

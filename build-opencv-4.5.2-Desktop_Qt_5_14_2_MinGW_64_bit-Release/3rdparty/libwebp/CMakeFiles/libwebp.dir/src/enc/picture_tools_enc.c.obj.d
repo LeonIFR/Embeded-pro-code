@@ -1,0 +1,34 @@
+3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/picture_tools_enc.c.obj: \
+ H:\MCU\opencv-4.5.2\3rdparty\libwebp\src\enc\picture_tools_enc.c \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/assert.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/crtdefs.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/vadefs.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/enc/vp8i_enc.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/string.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/dec/common_dec.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/dsp/dsp.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/webp/types.h \
+ G:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/stddef.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/stddef.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/inttypes.h \
+ G:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/stdint.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/stdint.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_print_push.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_print_pop.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/utils/bit_writer_utils.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/utils/thread_utils.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/utils/utils.h \
+ G:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed/limits.h \
+ G:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed/syslimits.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/limits.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/webp/encode.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/webp/types.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/dsp/yuv.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/dec/vp8_dec.h \
+ H:/MCU/opencv-4.5.2/3rdparty/libwebp/src/webp/decode.h

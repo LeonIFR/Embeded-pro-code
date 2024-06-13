@@ -1,0 +1,1 @@
+-I"H:/MCU/opencv-4.5.2/modules/core/include" -I"H:/MCU/build-opencv-4.5.2-Desktop_Qt_5_14_2_MinGW_64_bit-Release/modules/core" -I"H:/MCU/opencv-4.5.2/3rdparty/zlib" -I"H:/MCU/build-opencv-4.5.2-Desktop_Qt_5_14_2_MinGW_64_bit-Release/3rdparty/zlib" -I"H:/MCU/opencv-4.5.2/3rdparty/include/opencl/1.2" -isystem "H:/MCU/build-opencv-4.5.2-Desktop_Qt_5_14_2_MinGW_64_bit-Release"

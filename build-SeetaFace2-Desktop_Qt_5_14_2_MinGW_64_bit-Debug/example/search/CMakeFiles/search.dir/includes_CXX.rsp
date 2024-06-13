@@ -1,0 +1,1 @@
+-IH:/MCU/SeetaFace2/example/search -IH:/MCU/SeetaFace2/SeetaNet/include -IH:/MCU/SeetaFace2/FaceDetector/include -IH:/MCU/SeetaFace2/FaceLandmarker/include -IH:/MCU/SeetaFace2/FaceRecognizer/include -IH:/MCU/SeetaFace2/QualityAssessor/include -I"H:/MCU/build-SeetaFace2-Desktop_Qt_5_14_2_MinGW_64_bit-Debug" -isystem H:/MCU/CMAKE_INSTALL_PREFIX/include

@@ -1,0 +1,1 @@
+-I"H:/MCU/build-opencv-4.5.2-Desktop_Qt_5_14_2_MinGW_64_bit-Release/3rdparty/libjpeg-turbo" -I"H:/MCU/opencv-4.5.2/3rdparty/libjpeg-turbo/src" -isystem "H:/MCU/build-opencv-4.5.2-Desktop_Qt_5_14_2_MinGW_64_bit-Release"

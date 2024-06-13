@@ -1,0 +1,1 @@
+-IH:/MCU/SeetaFace2/example/points81 -IH:/MCU/SeetaFace2/SeetaNet/include -IH:/MCU/SeetaFace2/FaceDetector/include -IH:/MCU/SeetaFace2/FaceLandmarker/include -I"H:/MCU/build-SeetaFace2-Desktop_Qt_5_14_2_MinGW_64_bit-Debug" -isystem H:/MCU/CMAKE_INSTALL_PREFIX/include

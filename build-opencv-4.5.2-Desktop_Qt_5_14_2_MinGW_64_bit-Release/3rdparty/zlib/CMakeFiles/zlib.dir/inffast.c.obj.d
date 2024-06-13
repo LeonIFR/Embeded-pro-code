@@ -1,0 +1,36 @@
+3rdparty/zlib/CMakeFiles/zlib.dir/inffast.c.obj: \
+ H:\MCU\opencv-4.5.2\3rdparty\zlib\inffast.c \
+ H:\MCU\opencv-4.5.2\3rdparty\zlib\zutil.h \
+ H:\MCU\opencv-4.5.2\3rdparty\zlib\zlib.h \
+ H:\MCU\opencv-4.5.2\3rdparty\zlib\zconf.h \
+ G:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/stddef.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/stddef.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/crtdefs.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/vadefs.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+ G:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed/limits.h \
+ G:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed/syslimits.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/limits.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/sys/types.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ G:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/stdarg.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/stdarg.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/unistd.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/io.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/string.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/process.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/corecrt_startup.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/getopt.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/pthread_unistd.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/stdlib.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ G:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include/malloc.h \
+ H:\MCU\opencv-4.5.2\3rdparty\zlib\inftrees.h \
+ H:\MCU\opencv-4.5.2\3rdparty\zlib\inflate.h \
+ H:\MCU\opencv-4.5.2\3rdparty\zlib\inffast.h

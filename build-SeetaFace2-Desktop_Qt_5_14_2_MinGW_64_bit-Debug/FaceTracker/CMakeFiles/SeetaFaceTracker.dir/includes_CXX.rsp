@@ -1,0 +1,1 @@
+-IH:/MCU/SeetaFace2/FaceTracker -IH:/MCU/SeetaFace2/FaceTracker/include -IH:/MCU/SeetaFace2/FaceTracker/include/seeta -IH:/MCU/SeetaFace2/FaceTracker/seeta -IH:/MCU/SeetaFace2/SeetaNet/include -IH:/MCU/SeetaFace2/FaceDetector/include -I"H:/MCU/build-SeetaFace2-Desktop_Qt_5_14_2_MinGW_64_bit-Debug"
