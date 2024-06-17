@@ -223,6 +223,7 @@ Makefile: ../FaceAttendance/FaceAttendance.pro G:/Qt/5.14.2/mingw73_64/mkspecs/w
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/qt_config.prf \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/exclusive_builds.prf \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/toolchain.prf \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/default_pre.prf \
@@ -251,7 +252,6 @@ Makefile: ../FaceAttendance/FaceAttendance.pro G:/Qt/5.14.2/mingw73_64/mkspecs/w
 		G:/Qt/5.14.2/mingw73_64/lib/Qt5Gui.prl \
 		G:/Qt/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		G:/Qt/5.14.2/mingw73_64/lib/qtmain.prl \
-		.qmake.stash \
 		G:/Qt/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
 		../FaceAttendance/image.qrc
 	$(QMAKE) -o Makefile ..\FaceAttendance\FaceAttendance.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -408,6 +408,7 @@ G:/Qt/5.14.2/mingw73_64/mkspecs/features/qt_functions.prf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/qt_config.prf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++/qmake.conf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/exclusive_builds.prf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/toolchain.prf:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/default_pre.prf:
@@ -436,7 +437,6 @@ G:/Qt/5.14.2/mingw73_64/lib/Qt5Widgets.prl:
 G:/Qt/5.14.2/mingw73_64/lib/Qt5Gui.prl:
 G:/Qt/5.14.2/mingw73_64/lib/Qt5Core.prl:
 G:/Qt/5.14.2/mingw73_64/lib/qtmain.prl:
-.qmake.stash:
 G:/Qt/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:
 ../FaceAttendance/image.qrc:
 qmake: FORCE

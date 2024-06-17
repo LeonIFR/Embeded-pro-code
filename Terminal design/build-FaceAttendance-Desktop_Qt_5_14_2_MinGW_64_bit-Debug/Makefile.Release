@@ -16,10 +16,10 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -O2 -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -O2 -std=gnu++11 -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\FaceAttendance -I. -IG:\Qt\5.14.2\mingw73_64\include -IG:\Qt\5.14.2\mingw73_64\include\QtWidgets -IG:\Qt\5.14.2\mingw73_64\include\QtGui -IG:\Qt\5.14.2\mingw73_64\include\QtANGLE -IG:\Qt\5.14.2\mingw73_64\include\QtCore -Irelease -I. -I/include -IG:\Qt\5.14.2\mingw73_64\mkspecs\win32-g++ 
+INCPATH       = -I..\FaceAttendance -I. -I..\..\CMAKE_opencv\include -I..\..\CMAKE_opencv\include\opencv2 -I..\..\CAMKE_Seatface2\include -I..\..\CAMKE_Seatface2\include\seeta -IG:\Qt\5.14.2\mingw73_64\include -IG:\Qt\5.14.2\mingw73_64\include\QtWidgets -IG:\Qt\5.14.2\mingw73_64\include\QtGui -IG:\Qt\5.14.2\mingw73_64\include\QtANGLE -IG:\Qt\5.14.2\mingw73_64\include\QtCore -Irelease -I. -I/include -IG:\Qt\5.14.2\mingw73_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-s -Wl,-subsystem,windows -mthreads
-LIBS        =        G:\Qt\5.14.2\mingw73_64\lib\libQt5Widgets.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Gui.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Core.a  -lmingw32 G:\Qt\5.14.2\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
+LIBS        =        H:\MCU\CMAKE_opencv\x64\mingw\lib\libopencv* H:\MCU\CAMKE_Seatface2\lib\libSeeta* G:\Qt\5.14.2\mingw73_64\lib\libQt5Widgets.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Gui.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Core.a  -lmingw32 G:\Qt\5.14.2\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
 QMAKE         = G:\Qt\5.14.2\mingw73_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -225,9 +225,112 @@ release/moc_faceattendance.cpp: ../FaceAttendance/faceattendance.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtabwidget.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		../../CMAKE_opencv/include/opencv2/opencv.hpp \
+		../../CMAKE_opencv/include/opencv2/opencv_modules.hpp \
+		../../CMAKE_opencv/include/opencv2/core.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvdef.h \
+		../../CMAKE_opencv/include/opencv2/core/version.hpp \
+		../../CMAKE_opencv/include/opencv2/cvconfig.h \
+		../../CMAKE_opencv/include/opencv2/core/hal/interface.h \
+		../../CMAKE_opencv/include/opencv2/core/cv_cpu_dispatch.h \
+		../../CMAKE_opencv/include/opencv2/core/cv_cpu_helper.h \
+		../../CMAKE_opencv/include/opencv2/core/hal/msa_macros.h \
+		../../CMAKE_opencv/include/opencv2/core/fast_math.hpp \
+		../../CMAKE_opencv/include/opencv2/core/base.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvstd.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvstd_wrapper.hpp \
+		../../CMAKE_opencv/include/opencv2/core/neon_utils.hpp \
+		../../CMAKE_opencv/include/opencv2/core/vsx_utils.hpp \
+		../../CMAKE_opencv/include/opencv2/core/check.hpp \
+		../../CMAKE_opencv/include/opencv2/core/traits.hpp \
+		../../CMAKE_opencv/include/opencv2/core/matx.hpp \
+		../../CMAKE_opencv/include/opencv2/core/saturate.hpp \
+		../../CMAKE_opencv/include/opencv2/core/types.hpp \
+		../../CMAKE_opencv/include/opencv2/core/mat.hpp \
+		../../CMAKE_opencv/include/opencv2/core/bufferpool.hpp \
+		../../CMAKE_opencv/include/opencv2/core/mat.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/core/persistence.hpp \
+		../../CMAKE_opencv/include/opencv2/core/operations.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvstd.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/core/utility.hpp \
+		../../CMAKE_opencv/include/opencv2/core/utils/instrumentation.hpp \
+		../../CMAKE_opencv/include/opencv2/core/utils/tls.hpp \
+		../../CMAKE_opencv/include/opencv2/core/optim.hpp \
+		../../CMAKE_opencv/include/opencv2/core/ovx.hpp \
+		../../CMAKE_opencv/include/opencv2/calib3d.hpp \
+		../../CMAKE_opencv/include/opencv2/features2d.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/miniflann.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/defines.h \
+		../../CMAKE_opencv/include/opencv2/flann/config.h \
+		../../CMAKE_opencv/include/opencv2/core/affine.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/dnn.hpp \
+		../../CMAKE_opencv/include/opencv2/core/async.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/version.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/dict.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/layer.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/dnn.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/utils/inference_engine.hpp \
+		../../CMAKE_opencv/include/opencv2/flann.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/flann_base.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/general.h \
+		../../CMAKE_opencv/include/opencv2/flann/matrix.h \
+		../../CMAKE_opencv/include/opencv2/flann/params.h \
+		../../CMAKE_opencv/include/opencv2/flann/any.h \
+		../../CMAKE_opencv/include/opencv2/flann/saving.h \
+		../../CMAKE_opencv/include/opencv2/flann/nn_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/result_set.h \
+		../../CMAKE_opencv/include/opencv2/flann/all_indices.h \
+		../../CMAKE_opencv/include/opencv2/flann/kdtree_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/dynamic_bitset.h \
+		../../CMAKE_opencv/include/opencv2/flann/dist.h \
+		../../CMAKE_opencv/include/opencv2/flann/heap.h \
+		../../CMAKE_opencv/include/opencv2/flann/allocator.h \
+		../../CMAKE_opencv/include/opencv2/flann/random.h \
+		../../CMAKE_opencv/include/opencv2/flann/kdtree_single_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/kmeans_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/logger.h \
+		../../CMAKE_opencv/include/opencv2/flann/composite_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/linear_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/hierarchical_clustering_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/lsh_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/lsh_table.h \
+		../../CMAKE_opencv/include/opencv2/flann/autotuned_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/ground_truth.h \
+		../../CMAKE_opencv/include/opencv2/flann/index_testing.h \
+		../../CMAKE_opencv/include/opencv2/flann/timer.h \
+		../../CMAKE_opencv/include/opencv2/flann/sampling.h \
+		../../CMAKE_opencv/include/opencv2/highgui.hpp \
+		../../CMAKE_opencv/include/opencv2/imgcodecs.hpp \
+		../../CMAKE_opencv/include/opencv2/videoio.hpp \
+		../../CMAKE_opencv/include/opencv2/imgproc.hpp \
+		../../CMAKE_opencv/include/opencv2/imgproc/segmentation.hpp \
+		../../CMAKE_opencv/include/opencv2/ml.hpp \
+		../../CMAKE_opencv/include/opencv2/ml/ml.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/objdetect.hpp \
+		../../CMAKE_opencv/include/opencv2/objdetect/detection_based_tracker.hpp \
+		../../CMAKE_opencv/include/opencv2/photo.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/warpers.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/warpers.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cuda.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cuda_types.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cuda.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/warpers_inl.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/matchers.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/motion_estimators.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/util.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/util_inl.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/camera.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/exposure_compensate.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/seam_finders.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/blenders.hpp \
+		../../CMAKE_opencv/include/opencv2/video.hpp \
+		../../CMAKE_opencv/include/opencv2/video/tracking.hpp \
+		../../CMAKE_opencv/include/opencv2/video/background_segm.hpp \
 		release/moc_predefs.h \
 		G:/Qt/5.14.2/mingw73_64/bin/moc.exe
-	G:\Qt\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include "H:/MCU/Terminal design/build-FaceAttendance-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IG:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++ -I"H:/MCU/Terminal design/FaceAttendance" -IG:/Qt/5.14.2/mingw73_64/include -IG:/Qt/5.14.2/mingw73_64/include/QtWidgets -IG:/Qt/5.14.2/mingw73_64/include/QtGui -IG:/Qt/5.14.2/mingw73_64/include/QtANGLE -IG:/Qt/5.14.2/mingw73_64/include/QtCore -I. -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IG:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\FaceAttendance\faceattendance.h -o release\moc_faceattendance.cpp
+	G:\Qt\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include "H:/MCU/Terminal design/build-FaceAttendance-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IG:/Qt/5.14.2/mingw73_64/mkspecs/win32-g++ -I"H:/MCU/Terminal design/FaceAttendance" -IH:/MCU/CMAKE_opencv/include -IH:/MCU/CMAKE_opencv/include/opencv2 -IH:/MCU/CAMKE_Seatface2/include -IH:/MCU/CAMKE_Seatface2/include/seeta -IG:/Qt/5.14.2/mingw73_64/include -IG:/Qt/5.14.2/mingw73_64/include/QtWidgets -IG:/Qt/5.14.2/mingw73_64/include/QtGui -IG:/Qt/5.14.2/mingw73_64/include/QtANGLE -IG:/Qt/5.14.2/mingw73_64/include/QtCore -I. -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IG:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IG:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\FaceAttendance\faceattendance.h -o release\moc_faceattendance.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -360,6 +463,109 @@ release/main.o: ../FaceAttendance/main.cpp ../FaceAttendance/faceattendance.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtabwidget.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
+		../../CMAKE_opencv/include/opencv2/opencv.hpp \
+		../../CMAKE_opencv/include/opencv2/opencv_modules.hpp \
+		../../CMAKE_opencv/include/opencv2/core.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvdef.h \
+		../../CMAKE_opencv/include/opencv2/core/version.hpp \
+		../../CMAKE_opencv/include/opencv2/cvconfig.h \
+		../../CMAKE_opencv/include/opencv2/core/hal/interface.h \
+		../../CMAKE_opencv/include/opencv2/core/cv_cpu_dispatch.h \
+		../../CMAKE_opencv/include/opencv2/core/cv_cpu_helper.h \
+		../../CMAKE_opencv/include/opencv2/core/hal/msa_macros.h \
+		../../CMAKE_opencv/include/opencv2/core/fast_math.hpp \
+		../../CMAKE_opencv/include/opencv2/core/base.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvstd.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvstd_wrapper.hpp \
+		../../CMAKE_opencv/include/opencv2/core/neon_utils.hpp \
+		../../CMAKE_opencv/include/opencv2/core/vsx_utils.hpp \
+		../../CMAKE_opencv/include/opencv2/core/check.hpp \
+		../../CMAKE_opencv/include/opencv2/core/traits.hpp \
+		../../CMAKE_opencv/include/opencv2/core/matx.hpp \
+		../../CMAKE_opencv/include/opencv2/core/saturate.hpp \
+		../../CMAKE_opencv/include/opencv2/core/types.hpp \
+		../../CMAKE_opencv/include/opencv2/core/mat.hpp \
+		../../CMAKE_opencv/include/opencv2/core/bufferpool.hpp \
+		../../CMAKE_opencv/include/opencv2/core/mat.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/core/persistence.hpp \
+		../../CMAKE_opencv/include/opencv2/core/operations.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvstd.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/core/utility.hpp \
+		../../CMAKE_opencv/include/opencv2/core/utils/instrumentation.hpp \
+		../../CMAKE_opencv/include/opencv2/core/utils/tls.hpp \
+		../../CMAKE_opencv/include/opencv2/core/optim.hpp \
+		../../CMAKE_opencv/include/opencv2/core/ovx.hpp \
+		../../CMAKE_opencv/include/opencv2/calib3d.hpp \
+		../../CMAKE_opencv/include/opencv2/features2d.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/miniflann.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/defines.h \
+		../../CMAKE_opencv/include/opencv2/flann/config.h \
+		../../CMAKE_opencv/include/opencv2/core/affine.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/dnn.hpp \
+		../../CMAKE_opencv/include/opencv2/core/async.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/version.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/dict.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/layer.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/dnn.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/utils/inference_engine.hpp \
+		../../CMAKE_opencv/include/opencv2/flann.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/flann_base.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/general.h \
+		../../CMAKE_opencv/include/opencv2/flann/matrix.h \
+		../../CMAKE_opencv/include/opencv2/flann/params.h \
+		../../CMAKE_opencv/include/opencv2/flann/any.h \
+		../../CMAKE_opencv/include/opencv2/flann/saving.h \
+		../../CMAKE_opencv/include/opencv2/flann/nn_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/result_set.h \
+		../../CMAKE_opencv/include/opencv2/flann/all_indices.h \
+		../../CMAKE_opencv/include/opencv2/flann/kdtree_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/dynamic_bitset.h \
+		../../CMAKE_opencv/include/opencv2/flann/dist.h \
+		../../CMAKE_opencv/include/opencv2/flann/heap.h \
+		../../CMAKE_opencv/include/opencv2/flann/allocator.h \
+		../../CMAKE_opencv/include/opencv2/flann/random.h \
+		../../CMAKE_opencv/include/opencv2/flann/kdtree_single_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/kmeans_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/logger.h \
+		../../CMAKE_opencv/include/opencv2/flann/composite_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/linear_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/hierarchical_clustering_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/lsh_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/lsh_table.h \
+		../../CMAKE_opencv/include/opencv2/flann/autotuned_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/ground_truth.h \
+		../../CMAKE_opencv/include/opencv2/flann/index_testing.h \
+		../../CMAKE_opencv/include/opencv2/flann/timer.h \
+		../../CMAKE_opencv/include/opencv2/flann/sampling.h \
+		../../CMAKE_opencv/include/opencv2/highgui.hpp \
+		../../CMAKE_opencv/include/opencv2/imgcodecs.hpp \
+		../../CMAKE_opencv/include/opencv2/videoio.hpp \
+		../../CMAKE_opencv/include/opencv2/imgproc.hpp \
+		../../CMAKE_opencv/include/opencv2/imgproc/segmentation.hpp \
+		../../CMAKE_opencv/include/opencv2/ml.hpp \
+		../../CMAKE_opencv/include/opencv2/ml/ml.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/objdetect.hpp \
+		../../CMAKE_opencv/include/opencv2/objdetect/detection_based_tracker.hpp \
+		../../CMAKE_opencv/include/opencv2/photo.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/warpers.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/warpers.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cuda.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cuda_types.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cuda.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/warpers_inl.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/matchers.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/motion_estimators.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/util.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/util_inl.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/camera.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/exposure_compensate.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/seam_finders.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/blenders.hpp \
+		../../CMAKE_opencv/include/opencv2/video.hpp \
+		../../CMAKE_opencv/include/opencv2/video/tracking.hpp \
+		../../CMAKE_opencv/include/opencv2/video/background_segm.hpp \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
@@ -477,7 +683,135 @@ release/faceattendance.o: ../FaceAttendance/faceattendance.cpp ../FaceAttendance
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qtabwidget.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtGui/qicon.h \
-		ui_faceattendance.h
+		../../CMAKE_opencv/include/opencv2/opencv.hpp \
+		../../CMAKE_opencv/include/opencv2/opencv_modules.hpp \
+		../../CMAKE_opencv/include/opencv2/core.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvdef.h \
+		../../CMAKE_opencv/include/opencv2/core/version.hpp \
+		../../CMAKE_opencv/include/opencv2/cvconfig.h \
+		../../CMAKE_opencv/include/opencv2/core/hal/interface.h \
+		../../CMAKE_opencv/include/opencv2/core/cv_cpu_dispatch.h \
+		../../CMAKE_opencv/include/opencv2/core/cv_cpu_helper.h \
+		../../CMAKE_opencv/include/opencv2/core/hal/msa_macros.h \
+		../../CMAKE_opencv/include/opencv2/core/fast_math.hpp \
+		../../CMAKE_opencv/include/opencv2/core/base.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvstd.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvstd_wrapper.hpp \
+		../../CMAKE_opencv/include/opencv2/core/neon_utils.hpp \
+		../../CMAKE_opencv/include/opencv2/core/vsx_utils.hpp \
+		../../CMAKE_opencv/include/opencv2/core/check.hpp \
+		../../CMAKE_opencv/include/opencv2/core/traits.hpp \
+		../../CMAKE_opencv/include/opencv2/core/matx.hpp \
+		../../CMAKE_opencv/include/opencv2/core/saturate.hpp \
+		../../CMAKE_opencv/include/opencv2/core/types.hpp \
+		../../CMAKE_opencv/include/opencv2/core/mat.hpp \
+		../../CMAKE_opencv/include/opencv2/core/bufferpool.hpp \
+		../../CMAKE_opencv/include/opencv2/core/mat.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/core/persistence.hpp \
+		../../CMAKE_opencv/include/opencv2/core/operations.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cvstd.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/core/utility.hpp \
+		../../CMAKE_opencv/include/opencv2/core/utils/instrumentation.hpp \
+		../../CMAKE_opencv/include/opencv2/core/utils/tls.hpp \
+		../../CMAKE_opencv/include/opencv2/core/optim.hpp \
+		../../CMAKE_opencv/include/opencv2/core/ovx.hpp \
+		../../CMAKE_opencv/include/opencv2/calib3d.hpp \
+		../../CMAKE_opencv/include/opencv2/features2d.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/miniflann.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/defines.h \
+		../../CMAKE_opencv/include/opencv2/flann/config.h \
+		../../CMAKE_opencv/include/opencv2/core/affine.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/dnn.hpp \
+		../../CMAKE_opencv/include/opencv2/core/async.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/version.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/dict.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/layer.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/dnn.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/dnn/utils/inference_engine.hpp \
+		../../CMAKE_opencv/include/opencv2/flann.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/flann_base.hpp \
+		../../CMAKE_opencv/include/opencv2/flann/general.h \
+		../../CMAKE_opencv/include/opencv2/flann/matrix.h \
+		../../CMAKE_opencv/include/opencv2/flann/params.h \
+		../../CMAKE_opencv/include/opencv2/flann/any.h \
+		../../CMAKE_opencv/include/opencv2/flann/saving.h \
+		../../CMAKE_opencv/include/opencv2/flann/nn_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/result_set.h \
+		../../CMAKE_opencv/include/opencv2/flann/all_indices.h \
+		../../CMAKE_opencv/include/opencv2/flann/kdtree_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/dynamic_bitset.h \
+		../../CMAKE_opencv/include/opencv2/flann/dist.h \
+		../../CMAKE_opencv/include/opencv2/flann/heap.h \
+		../../CMAKE_opencv/include/opencv2/flann/allocator.h \
+		../../CMAKE_opencv/include/opencv2/flann/random.h \
+		../../CMAKE_opencv/include/opencv2/flann/kdtree_single_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/kmeans_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/logger.h \
+		../../CMAKE_opencv/include/opencv2/flann/composite_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/linear_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/hierarchical_clustering_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/lsh_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/lsh_table.h \
+		../../CMAKE_opencv/include/opencv2/flann/autotuned_index.h \
+		../../CMAKE_opencv/include/opencv2/flann/ground_truth.h \
+		../../CMAKE_opencv/include/opencv2/flann/index_testing.h \
+		../../CMAKE_opencv/include/opencv2/flann/timer.h \
+		../../CMAKE_opencv/include/opencv2/flann/sampling.h \
+		../../CMAKE_opencv/include/opencv2/highgui.hpp \
+		../../CMAKE_opencv/include/opencv2/imgcodecs.hpp \
+		../../CMAKE_opencv/include/opencv2/videoio.hpp \
+		../../CMAKE_opencv/include/opencv2/imgproc.hpp \
+		../../CMAKE_opencv/include/opencv2/imgproc/segmentation.hpp \
+		../../CMAKE_opencv/include/opencv2/ml.hpp \
+		../../CMAKE_opencv/include/opencv2/ml/ml.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/objdetect.hpp \
+		../../CMAKE_opencv/include/opencv2/objdetect/detection_based_tracker.hpp \
+		../../CMAKE_opencv/include/opencv2/photo.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/warpers.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/warpers.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cuda.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cuda_types.hpp \
+		../../CMAKE_opencv/include/opencv2/core/cuda.inl.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/warpers_inl.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/matchers.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/motion_estimators.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/util.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/util_inl.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/camera.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/exposure_compensate.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/seam_finders.hpp \
+		../../CMAKE_opencv/include/opencv2/stitching/detail/blenders.hpp \
+		../../CMAKE_opencv/include/opencv2/video.hpp \
+		../../CMAKE_opencv/include/opencv2/video/tracking.hpp \
+		../../CMAKE_opencv/include/opencv2/video/background_segm.hpp \
+		ui_faceattendance.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QVariant \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QHBoxLayout \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qboxlayout.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlayout.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlayoutitem.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgridlayout.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QLabel \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlabel.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qframe.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QLineEdit \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlineedit.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qtextcursor.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qtextformat.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qpen.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qtextoption.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QSpacerItem \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QVBoxLayout \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\faceattendance.o ..\FaceAttendance\faceattendance.cpp
 
 release/qrc_image.o: release/qrc_image.cpp 

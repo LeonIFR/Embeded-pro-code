@@ -32,11 +32,12 @@ public:
     QLabel *label;
     QLabel *label_2;
     QSpacerItem *horizontalSpacer_3;
-    QWidget *widget_3;
+    QWidget *headpic;
+    QLabel *videoLb;
     QWidget *widget_4;
     QLabel *titleLb;
     QLabel *headLb;
-    QWidget *widget1;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QWidget *gonghao;
     QHBoxLayout *horizontalLayout;
@@ -69,7 +70,7 @@ public:
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(0, 0, 480, 480));
-        widget->setStyleSheet(QString::fromUtf8("background-color: rgb(62, 71, 78);"));
+        widget->setStyleSheet(QString::fromUtf8(""));
         widget_2 = new QWidget(widget);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
         widget_2->setGeometry(QRect(109, 329, 261, 81));
@@ -101,10 +102,16 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
 
-        widget_3 = new QWidget(widget);
-        widget_3->setObjectName(QString::fromUtf8("widget_3"));
-        widget_3->setGeometry(QRect(100, 20, 266, 266));
-        widget_3->setStyleSheet(QString::fromUtf8("border-image: url(:/crc.png);"));
+        headpic = new QWidget(widget);
+        headpic->setObjectName(QString::fromUtf8("headpic"));
+        headpic->setGeometry(QRect(100, 20, 266, 266));
+        headpic->setStyleSheet(QString::fromUtf8("border-image: url(:/crc.png);"));
+        videoLb = new QLabel(widget);
+        videoLb->setObjectName(QString::fromUtf8("videoLb"));
+        videoLb->setGeometry(QRect(0, 0, 480, 490));
+        videoLb->raise();
+        widget_2->raise();
+        headpic->raise();
         widget_4 = new QWidget(centralwidget);
         widget_4->setObjectName(QString::fromUtf8("widget_4"));
         widget_4->setGeometry(QRect(480, 0, 320, 480));
@@ -130,13 +137,13 @@ public:
         headLb = new QLabel(widget_4);
         headLb->setObjectName(QString::fromUtf8("headLb"));
         headLb->setGeometry(QRect(80, 50, 150, 150));
-        widget1 = new QWidget(widget_4);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(30, 200, 258, 264));
-        verticalLayout = new QVBoxLayout(widget1);
+        layoutWidget = new QWidget(widget_4);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 210, 258, 264));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        gonghao = new QWidget(widget1);
+        gonghao = new QWidget(layoutWidget);
         gonghao->setObjectName(QString::fromUtf8("gonghao"));
         gonghao->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "	border:1px solid #313236;\n"
@@ -184,7 +191,7 @@ public:
 
         verticalLayout->addWidget(gonghao);
 
-        xingming = new QWidget(widget1);
+        xingming = new QWidget(layoutWidget);
         xingming->setObjectName(QString::fromUtf8("xingming"));
         xingming->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "	border:1px solid #313236;\n"
@@ -229,7 +236,7 @@ public:
 
         verticalLayout->addWidget(xingming);
 
-        bumen = new QWidget(widget1);
+        bumen = new QWidget(layoutWidget);
         bumen->setObjectName(QString::fromUtf8("bumen"));
         bumen->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "	border:1px solid #313236;\n"
@@ -274,7 +281,7 @@ public:
 
         verticalLayout->addWidget(bumen);
 
-        shijian = new QWidget(widget1);
+        shijian = new QWidget(layoutWidget);
         shijian->setObjectName(QString::fromUtf8("shijian"));
         shijian->setStyleSheet(QString::fromUtf8("QWidget{\n"
 "	border:1px solid #313236;\n"
@@ -331,6 +338,7 @@ public:
         FaceAttendance->setWindowTitle(QCoreApplication::translate("FaceAttendance", "FaceAttendance", nullptr));
         label->setText(QString());
         label_2->setText(QCoreApplication::translate("FaceAttendance", "\350\256\244\350\257\201\346\210\220\345\212\237", nullptr));
+        videoLb->setText(QString());
         titleLb->setText(QCoreApplication::translate("FaceAttendance", "\344\272\272\350\204\270\350\257\206\345\210\253\350\200\203\345\213\244\347\263\273\347\273\237", nullptr));
         headLb->setText(QString());
         label_4->setText(QCoreApplication::translate("FaceAttendance", "\345\267\245\345\217\267", nullptr));
