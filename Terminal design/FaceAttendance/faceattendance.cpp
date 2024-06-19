@@ -13,6 +13,17 @@ FaceAttendance::FaceAttendance(QWidget *parent)
 
     //导入级联分类器文件
     cascade.load("H:/MCU/CMAKE_opencv/etc/haarcascades/haarcascade_frontalface_alt2.xml");
+
+    // QTcpSocket 当断开连接时：disconnected信号，连接成功：connected信号
+    // connect2，当断开连接时，定时发送信号
+    connect(&msocket, &QTcpSocket::disconnected, this, &FaceAttendance::start_connect);
+    // connect3，连接成功，停止连接
+    connect(&msocket, &QTcpSocket::connected, this, &FaceAttendance::stop_connect);
+
+    //定时连接服务器，connect1
+    connect(&mtimer, &QTimer::timeout, this, &FaceAttendance::timer_connect);// 定时器， 定时时长， ，运行
+    // 启动定时器
+    mtimer.start(5000);//每5s连接一次，直到连接成功
 }
 
 FaceAttendance::~FaceAttendance()
@@ -61,5 +72,24 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
     //ui中显示
     QPixmap mmp = QPixmap::fromImage(image);
     ui->videoLb->setPixmap(mmp);
+}
+
+void FaceAttendance::timer_connect()
+{
+    //连接服务器
+    msocket.connectToHost("172.27.82.24",6000);
+    qDebug()<<"正在连接服务器";
+}
+
+void FaceAttendance::stop_connect()
+{
+    mtimer.stop();//停止定时器，不在发送信号
+    qDebug()<<"连接服务器成功";
+}
+
+void FaceAttendance::start_connect()
+{
+    mtimer.start(5000);// 定时器设置5s，5s后connect1发送连接信号
+    qDebug()<< "断开服务器";
 }
 

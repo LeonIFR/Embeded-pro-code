@@ -74,7 +74,7 @@ public:
         widget_2 = new QWidget(widget);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
         widget_2->setGeometry(QRect(109, 329, 261, 81));
-        widget_2->setStyleSheet(QString::fromUtf8("background-color: rgb(49, 50, 54, 80);"));
+        widget_2->setStyleSheet(QString::fromUtf8("background-color: rgba(49, 50, 54, 0.8);"));
         horizontalLayout_2 = new QHBoxLayout(widget_2);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
