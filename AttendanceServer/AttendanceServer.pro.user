@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.1, 2024-06-19T21:21:08. -->
+<!-- Written by QtCreator 4.11.1, 2024-06-23T20:15:29. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -113,7 +113,9 @@
     </valuemap>
     <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
-    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
+     <value type="QString">Path=G:\Qt\Tools\mingw730_64\bin;G:\Qt\5.14.2\mingw73_64\bin;G:\Qt\Tools\mingw730_64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;G:\opencv\opencv\build\x64\vc16\bin;E:\Windows Kits\10\Windows Performance Toolkit\;G:\opencv\opencv\build\x64\vc16\bin;G:\CMake\bin;G:\Git\bin;H:\git\Git\cmd;H:\MCU\CMAKE_opencv\x64\mingw\bin;H:\MCU\CAMKE_Seatface2\lib;C:\Users\13260\AppData\Local\Microsoft\WindowsApps;H:\MCU\CMAKE_seetaface2\bin;H:\MCU\CMAKE_opencv\x64\mingw\bin;</value>
+    </valuelist>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Debug</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4BuildConfiguration</value>
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration">2</value>

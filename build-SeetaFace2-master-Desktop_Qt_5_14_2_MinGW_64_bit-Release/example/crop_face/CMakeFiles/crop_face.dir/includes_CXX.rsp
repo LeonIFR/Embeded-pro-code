@@ -1,0 +1,1 @@
+-I"H:/MCU/SeetaFace2-master/example/crop_face" -I"H:/MCU/SeetaFace2-master/FaceDetector/include" -I"H:/MCU/SeetaFace2-master/FaceLandmarker/include" -I"H:/MCU/SeetaFace2-master/FaceRecognizer/include" -I"H:/MCU/build-SeetaFace2-master-Desktop_Qt_5_14_2_MinGW_64_bit-Release" -isystem H:/MCU/CMAKE_opencv/include

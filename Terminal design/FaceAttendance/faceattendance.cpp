@@ -7,7 +7,7 @@ FaceAttendance::FaceAttendance(QWidget *parent)
 {
     ui->setupUi(this);
     //打开摄像头
-    cap.open(1);
+    cap.open(0);
     //启动定时器时间
     startTimer(100);
 
@@ -54,6 +54,27 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
         // 移动人脸框（图片--QLabel）
         ui->headpic->move(rect.x,rect.y);
 
+        // Mat 转换为能够发送的数据QByteArray
+        // 编码成jpg格式
+        std::vector<uchar> buf;
+        cv::imencode(".jpg", srcImage, buf);
+        // 新建传输的数据格式
+        QByteArray byte((const char*)buf.data(),buf.size());
+
+        // 准备发送
+        // 获取数据大小
+        quint64 backsize = byte.size();
+        // 创建发送对象
+        QByteArray sendData;
+        // 将用户定义的一些变量保存到文件的模块
+        QDataStream stream(&sendData, QIODevice::WriteOnly);
+        // 设置QDataStream版本
+        stream.setVersion(QDataStream::Qt_5_14);
+        // 将数据大小和字节写入sendData
+        stream << backsize << byte;
+        // 发送
+        msocket.write(sendData);
+
     }else//当检测不到人脸时，回到初始位。
     {
         //把人脸框移动到中心位置
@@ -77,7 +98,7 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
 void FaceAttendance::timer_connect()
 {
     //连接服务器
-    msocket.connectToHost("172.27.82.24",6000);
+    msocket.connectToHost("172.27.82.24",9999);
     qDebug()<<"正在连接服务器";
 }
 

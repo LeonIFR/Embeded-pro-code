@@ -1,0 +1,1 @@
+-I"H:/MCU/SeetaFace2-master/example/tracking" -I"H:/MCU/SeetaFace2-master/SeetaNet/include" -I"H:/MCU/SeetaFace2-master/FaceTracker/include" -isystem H:/MCU/CMAKE_opencv/include

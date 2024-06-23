@@ -1,0 +1,465 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-327710d9264dd7ccb95b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "SeetaNet",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SeetaNet-Release-348df946e6fbeb70d5f5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "SeetaNet",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "FaceDetector",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-FaceDetector-Release-bda717654a31d964654e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "FaceDetector",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "FaceTracker",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-FaceTracker-Release-e5678483c7a529c1f9f6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "FaceTracker",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "FaceLandmarker",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-FaceLandmarker-Release-7be78da39875cbf52418.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "FaceLandmarker",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "FaceRecognizer",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-FaceRecognizer-Release-a759116c786151afc178.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "FaceRecognizer",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "QualityAssessor",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-QualityAssessor-Release-be0b684c22c042365b58.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "QualityAssessor",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "example",
+					"childIndexes" : 
+					[
+						8,
+						9,
+						10,
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-example-Release-8ca0c98ee1efd38c600f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "example"
+				},
+				{
+					"build" : "example/points81",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-example.points81-Release-97a8ea424809e0b174a1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 8,
+					"source" : "example/points81",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "example/search",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-example.search-Release-f99475502b86ce27e591.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 9,
+					"source" : "example/search",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "example/tracking",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-example.tracking-Release-0de5887e449fa0f19989.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 10,
+					"source" : "example/tracking",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "example/crop_face",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-example.crop_face-Release-6cb2a82f46f726ccbb7c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 11,
+					"source" : "example/crop_face",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SeetaFace",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SeetaNet",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "SeetaFaceDetector",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "SeetaFaceTracker",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "SeetaFaceLandmarker",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "SeetaFaceRecognizer",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "SeetaQualityAssessor",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						8,
+						9,
+						10,
+						11
+					],
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "Example",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "points81",
+					"parentIndex" : 7,
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "search",
+					"parentIndex" : 7,
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "tracking",
+					"parentIndex" : 7,
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "crop_face",
+					"parentIndex" : 7,
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "SeetaFaceDetector::@1ee3b9d09c6f3114792e",
+					"jsonFile" : "target-SeetaFaceDetector-Release-19b67ff9fa182cf33406.json",
+					"name" : "SeetaFaceDetector",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "SeetaFaceLandmarker::@1bfe4c54b30ba29d60dc",
+					"jsonFile" : "target-SeetaFaceLandmarker-Release-c286a884f3dffc0fb0da.json",
+					"name" : "SeetaFaceLandmarker",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "SeetaFaceRecognizer::@411f228d980ce3c3d87c",
+					"jsonFile" : "target-SeetaFaceRecognizer-Release-68a48e1dc2fd2994c7dc.json",
+					"name" : "SeetaFaceRecognizer",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "SeetaFaceTracker::@4578ceb0ce229cd529cb",
+					"jsonFile" : "target-SeetaFaceTracker-Release-0db334c582870db5002b.json",
+					"name" : "SeetaFaceTracker",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SeetaNet::@d31b7f39a39a9db7255f",
+					"jsonFile" : "target-SeetaNet-Release-84058fc3d3ef41e80228.json",
+					"name" : "SeetaNet",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "SeetaQualityAssessor::@fa6eeafa92253d2bc5cd",
+					"jsonFile" : "target-SeetaQualityAssessor-Release-3ca185156de877c07ac6.json",
+					"name" : "SeetaQualityAssessor",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "crop_face::@4b9e8866215f7b8a1d14",
+					"jsonFile" : "target-crop_face-Release-7a1c37734d04bf4e3b5c.json",
+					"name" : "crop_face",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "points81::@c35360ab3be3dfb76b16",
+					"jsonFile" : "target-points81-Release-ce8393f1d6c4a671609b.json",
+					"name" : "points81",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "search::@00e52ebb3ae2853cd7da",
+					"jsonFile" : "target-search-Release-1af31d20c1e2cb196ee7.json",
+					"name" : "search",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "tracking::@944e5b240f6890b1e0d7",
+					"jsonFile" : "target-tracking-Release-3eb69443c091223ebbaf.json",
+					"name" : "tracking",
+					"projectIndex" : 10
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-db97a70f4b1360d97688.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "H:/MCU/build-SeetaFace2-master-Desktop_Qt_5_14_2_MinGW_64_bit-Release",
+		"source" : "H:/MCU/SeetaFace2-master"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

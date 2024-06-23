@@ -1,0 +1,1 @@
+-I"H:/MCU/SeetaFace2-master/FaceTracker" -I"H:/MCU/SeetaFace2-master/FaceTracker/include" -I"H:/MCU/SeetaFace2-master/FaceTracker/include/seeta" -I"H:/MCU/SeetaFace2-master/FaceTracker/seeta" -I"H:/MCU/SeetaFace2-master/SeetaNet/include" -I"H:/MCU/SeetaFace2-master/FaceDetector/include" -I"H:/MCU/build-SeetaFace2-master-Desktop_Qt_5_14_2_MinGW_64_bit-Release"

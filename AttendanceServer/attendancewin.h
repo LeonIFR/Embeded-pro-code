@@ -25,6 +25,7 @@ private:
     Ui::AttendanceWin *ui;
     QTcpServer mserver;
     QTcpSocket *msocket;
+    qint64 bsize;
 
 };
 #endif // ATTENDANCEWIN_H
