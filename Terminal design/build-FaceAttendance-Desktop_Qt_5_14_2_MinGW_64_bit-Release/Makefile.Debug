@@ -19,7 +19,7 @@ CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra
 INCPATH       = -I..\FaceAttendance -I. -I..\..\CMAKE_opencv\include -I..\..\CMAKE_opencv\include\opencv2 -I..\..\CMAKE_seetaface2\include -I..\..\CMAKE_seetaface2\include\seeta -IG:\Qt\5.14.2\mingw73_64\include -IG:\Qt\5.14.2\mingw73_64\include\QtWidgets -IG:\Qt\5.14.2\mingw73_64\include\QtGui -IG:\Qt\5.14.2\mingw73_64\include\QtANGLE -IG:\Qt\5.14.2\mingw73_64\include\QtNetwork -IG:\Qt\5.14.2\mingw73_64\include\QtCore -Idebug -I. -I/include -IG:\Qt\5.14.2\mingw73_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        H:\MCU\CMAKE_opencv\x64\mingw\lib\libopencv* H:\MCU\CAMKE_seetaface2\lib\libSeeta* G:\Qt\5.14.2\mingw73_64\lib\libQt5Widgets.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Gui.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Network.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Core.a  -lmingw32 G:\Qt\5.14.2\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
+LIBS        =        H:\MCU\CMAKE_opencv\x64\mingw\lib\libopencv* H:\MCU\CMAKE_seetaface2\lib\libSeeta* G:\Qt\5.14.2\mingw73_64\lib\libQt5Widgets.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Gui.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Network.a G:\Qt\5.14.2\mingw73_64\lib\libQt5Core.a  -lmingw32 G:\Qt\5.14.2\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
 QMAKE         = G:\Qt\5.14.2\mingw73_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -815,7 +815,32 @@ debug/faceattendance.o: ../FaceAttendance/faceattendance.cpp ../FaceAttendance/f
 		G:/Qt/5.14.2/mingw73_64/include/QtCore/QTimer \
 		G:/Qt/5.14.2/mingw73_64/include/QtCore/qtimer.h \
 		G:/Qt/5.14.2/mingw73_64/include/QtCore/qbasictimer.h \
-		ui_faceattendance.h
+		ui_faceattendance.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/QVariant \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QApplication \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtCore/qeventloop.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qguiapplication.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qinputmethod.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QHBoxLayout \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qboxlayout.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlayout.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlayoutitem.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qgridlayout.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QLabel \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlabel.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qframe.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QLineEdit \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/qlineedit.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qtextcursor.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qtextformat.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qpen.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtGui/qtextoption.h \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QSpacerItem \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QVBoxLayout \
+		G:/Qt/5.14.2/mingw73_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\faceattendance.o ..\FaceAttendance\faceattendance.cpp
 
 debug/qrc_image.o: debug/qrc_image.cpp 

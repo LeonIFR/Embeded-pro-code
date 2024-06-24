@@ -20,10 +20,14 @@ FaceAttendance::FaceAttendance(QWidget *parent)
     // connect3，连接成功，停止连接
     connect(&msocket, &QTcpSocket::connected, this, &FaceAttendance::stop_connect);
 
+    // 关联接收数据的槽函数
+    connect(&msocket, &QTcpSocket::readyRead, this, &FaceAttendance::recv_data);
+
     //定时连接服务器，connect1
     connect(&mtimer, &QTimer::timeout, this, &FaceAttendance::timer_connect);// 定时器， 定时时长， ，运行
     // 启动定时器
     mtimer.start(5000);//每5s连接一次，直到连接成功
+    flag_faceSend = 0;
 }
 
 FaceAttendance::~FaceAttendance()
@@ -47,38 +51,43 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
 
     std::vector<Rect> faceRects;
     cascade.detectMultiScale(srcImage, faceRects);
-    if(faceRects.size()>0)//检测到人脸
+    if(faceRects.size()>0 && flag_faceSend >= 0)//检测到人脸
     {
+
         Rect rect = faceRects.at(0);// 第一个人脸的矩形框
 
         // 移动人脸框（图片--QLabel）
         ui->headpic->move(rect.x,rect.y);
 
-        // Mat 转换为能够发送的数据QByteArray
-        // 编码成jpg格式
-        std::vector<uchar> buf;
-        cv::imencode(".jpg", srcImage, buf);
-        // 新建传输的数据格式
-        QByteArray byte((const char*)buf.data(),buf.size());
+        if(flag_faceSend > 2){
+            // Mat 转换为能够发送的数据QByteArray
+            // 编码成jpg格式
+            std::vector<uchar> buf;
+            cv::imencode(".jpg", srcImage, buf);
+            // 新建传输的数据格式
+            QByteArray byte((const char*)buf.data(),buf.size());
 
-        // 准备发送
-        // 获取数据大小
-        quint64 backsize = byte.size();
-        // 创建发送对象
-        QByteArray sendData;
-        // 将用户定义的一些变量保存到文件的模块
-        QDataStream stream(&sendData, QIODevice::WriteOnly);
-        // 设置QDataStream版本
-        stream.setVersion(QDataStream::Qt_5_14);
-        // 将数据大小和字节写入sendData
-        stream << backsize << byte;
-        // 发送
-        msocket.write(sendData);
-
-    }else//当检测不到人脸时，回到初始位。
-    {
+            // 准备发送
+            // 获取数据大小
+            quint64 backsize = byte.size();
+            // 创建发送对象
+            QByteArray sendData;
+            // 将用户定义的一些变量保存到文件的模块
+            QDataStream stream(&sendData, QIODevice::WriteOnly);
+            // 设置QDataStream版本
+            stream.setVersion(QDataStream::Qt_5_14);
+            // 将数据大小和字节写入sendData
+            stream << backsize << byte;
+            // 发送
+            msocket.write(sendData);
+            flag_faceSend = -2;
+        }
+        flag_faceSend++;
+    }
+    if(faceRects.size() == 0){//当检测不到人脸时，回到初始位。
         //把人脸框移动到中心位置
         ui->headpic->move(100,60);
+        flag_faceSend = 0;
     }
 
 
@@ -95,6 +104,10 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
     ui->videoLb->setPixmap(mmp);
 }
 
+void FaceAttendance::recv_data(){
+    QString msg = msocket.readAll();
+    qDebug()<<msg;
+}
 void FaceAttendance::timer_connect()
 {
     //连接服务器

@@ -246,7 +246,7 @@ QLineEdit{
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit">
+          <widget class="QLineEdit" name="employeeIDEd">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -319,7 +319,7 @@ QLineEdit{
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_2">
+          <widget class="QLineEdit" name="nameEd">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -392,7 +392,7 @@ QLineEdit{
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3">
+          <widget class="QLineEdit" name="sectionEd">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -465,7 +465,7 @@ QLineEdit{
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_4">
+          <widget class="QLineEdit" name="timeEd">
            <property name="enabled">
             <bool>false</bool>
            </property>

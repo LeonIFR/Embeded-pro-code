@@ -4,13 +4,16 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
-
+#include <opencv.hpp>
 #include "registerwin.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
+    // 自定义类型需要注册才能传递
+    qRegisterMetaType<cv::Mat>("cv::Mat&");
+    qRegisterMetaType<cv::Mat>("cv::Mat");
+    qRegisterMetaType<int64_t>("int64_t");
     RegisterWin ww;
     ww.show();
 

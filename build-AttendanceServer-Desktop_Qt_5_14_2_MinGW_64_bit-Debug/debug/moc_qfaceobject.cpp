@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QFaceObject_t {
-    QByteArrayData data[7];
-    char stringdata0[65];
+    QByteArrayData data[9];
+    char stringdata0[84];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,16 +33,19 @@ struct qt_meta_stringdata_QFaceObject_t {
 static const qt_meta_stringdata_QFaceObject_t qt_meta_stringdata_QFaceObject = {
     {
 QT_MOC_LITERAL(0, 0, 11), // "QFaceObject"
-QT_MOC_LITERAL(1, 12, 13), // "face_register"
-QT_MOC_LITERAL(2, 26, 7), // "int64_t"
-QT_MOC_LITERAL(3, 34, 0), // ""
-QT_MOC_LITERAL(4, 35, 8), // "cv::Mat&"
-QT_MOC_LITERAL(5, 44, 9), // "faceimage"
-QT_MOC_LITERAL(6, 54, 10) // "face_query"
+QT_MOC_LITERAL(1, 12, 11), // "send_faceid"
+QT_MOC_LITERAL(2, 24, 0), // ""
+QT_MOC_LITERAL(3, 25, 7), // "int64_t"
+QT_MOC_LITERAL(4, 33, 6), // "faceid"
+QT_MOC_LITERAL(5, 40, 13), // "face_register"
+QT_MOC_LITERAL(6, 54, 8), // "cv::Mat&"
+QT_MOC_LITERAL(7, 63, 9), // "faceimage"
+QT_MOC_LITERAL(8, 73, 10) // "face_query"
 
     },
-    "QFaceObject\0face_register\0int64_t\0\0"
-    "cv::Mat&\0faceimage\0face_query"
+    "QFaceObject\0send_faceid\0\0int64_t\0"
+    "faceid\0face_register\0cv::Mat&\0faceimage\0"
+    "face_query"
 };
 #undef QT_MOC_LITERAL
 
@@ -52,20 +55,26 @@ static const uint qt_meta_data_QFaceObject[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags
+       1,    1,   29,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   24,    3, 0x0a /* Public */,
-       6,    1,   27,    3, 0x0a /* Public */,
+       5,    1,   32,    2, 0x0a /* Public */,
+       8,    1,   35,    2, 0x0a /* Public */,
+
+ // signals: parameters
+    QMetaType::Void, 0x80000000 | 3,    4,
 
  // slots: parameters
-    0x80000000 | 2, 0x80000000 | 4,    5,
-    QMetaType::Int, 0x80000000 | 4,    5,
+    0x80000000 | 3, 0x80000000 | 6,    7,
+    QMetaType::Int, 0x80000000 | 6,    7,
 
        0        // eod
 };
@@ -76,11 +85,21 @@ void QFaceObject::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         auto *_t = static_cast<QFaceObject *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: { int64_t _r = _t->face_register((*reinterpret_cast< cv::Mat(*)>(_a[1])));
+        case 0: _t->send_faceid((*reinterpret_cast< int64_t(*)>(_a[1]))); break;
+        case 1: { int64_t _r = _t->face_register((*reinterpret_cast< cv::Mat(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< int64_t*>(_a[0]) = std::move(_r); }  break;
-        case 1: { int _r = _t->face_query((*reinterpret_cast< cv::Mat(*)>(_a[1])));
+        case 2: { int _r = _t->face_query((*reinterpret_cast< cv::Mat(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         default: ;
+        }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            using _t = void (QFaceObject::*)(int64_t );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&QFaceObject::send_faceid)) {
+                *result = 0;
+                return;
+            }
         }
     }
 }
@@ -114,15 +133,22 @@ int QFaceObject::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
+}
+
+// SIGNAL 0
+void QFaceObject::send_faceid(int64_t _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

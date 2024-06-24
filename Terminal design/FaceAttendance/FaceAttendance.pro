@@ -15,16 +15,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+win32{
 # 添加头文件
 INCLUDEPATH += H:\MCU\CMAKE_opencv\include
 INCLUDEPATH += H:\MCU\CMAKE_opencv\include\opencv2
 INCLUDEPATH += H:\MCU\CMAKE_seetaface2\include
 INCLUDEPATH += H:\MCU\CMAKE_seetaface2\include\seeta
-
 # 添加库
-
 LIBS += H:\MCU\CMAKE_opencv\x64\mingw\lib\libopencv*
-LIBS += H:\MCU\CAMKE_seetaface2\lib\libSeeta*
+LIBS += H:\MCU\CMAKE_seetaface2\lib\libSeeta*
+}
 
 
 SOURCES += \

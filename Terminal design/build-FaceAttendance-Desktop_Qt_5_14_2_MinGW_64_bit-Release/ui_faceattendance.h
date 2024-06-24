@@ -43,22 +43,22 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label_4;
     QSpacerItem *horizontalSpacer;
-    QLineEdit *lineEdit;
+    QLineEdit *employeeIDEd;
     QWidget *xingming;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_5;
     QSpacerItem *horizontalSpacer_4;
-    QLineEdit *lineEdit_2;
+    QLineEdit *nameEd;
     QWidget *bumen;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_6;
     QSpacerItem *horizontalSpacer_5;
-    QLineEdit *lineEdit_3;
+    QLineEdit *sectionEd;
     QWidget *shijian;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_7;
     QSpacerItem *horizontalSpacer_6;
-    QLineEdit *lineEdit_4;
+    QLineEdit *timeEd;
 
     void setupUi(QMainWindow *FaceAttendance)
     {
@@ -176,17 +176,17 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        lineEdit = new QLineEdit(gonghao);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setEnabled(false);
+        employeeIDEd = new QLineEdit(gonghao);
+        employeeIDEd->setObjectName(QString::fromUtf8("employeeIDEd"));
+        employeeIDEd->setEnabled(false);
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
-        lineEdit->setSizePolicy(sizePolicy);
-        lineEdit->setMinimumSize(QSize(0, 43));
+        sizePolicy.setHeightForWidth(employeeIDEd->sizePolicy().hasHeightForWidth());
+        employeeIDEd->setSizePolicy(sizePolicy);
+        employeeIDEd->setMinimumSize(QSize(0, 43));
 
-        horizontalLayout->addWidget(lineEdit);
+        horizontalLayout->addWidget(employeeIDEd);
 
 
         verticalLayout->addWidget(gonghao);
@@ -224,14 +224,14 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_4);
 
-        lineEdit_2 = new QLineEdit(xingming);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setEnabled(false);
-        sizePolicy.setHeightForWidth(lineEdit_2->sizePolicy().hasHeightForWidth());
-        lineEdit_2->setSizePolicy(sizePolicy);
-        lineEdit_2->setMinimumSize(QSize(0, 43));
+        nameEd = new QLineEdit(xingming);
+        nameEd->setObjectName(QString::fromUtf8("nameEd"));
+        nameEd->setEnabled(false);
+        sizePolicy.setHeightForWidth(nameEd->sizePolicy().hasHeightForWidth());
+        nameEd->setSizePolicy(sizePolicy);
+        nameEd->setMinimumSize(QSize(0, 43));
 
-        horizontalLayout_3->addWidget(lineEdit_2);
+        horizontalLayout_3->addWidget(nameEd);
 
 
         verticalLayout->addWidget(xingming);
@@ -269,14 +269,14 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_5);
 
-        lineEdit_3 = new QLineEdit(bumen);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        lineEdit_3->setEnabled(false);
-        sizePolicy.setHeightForWidth(lineEdit_3->sizePolicy().hasHeightForWidth());
-        lineEdit_3->setSizePolicy(sizePolicy);
-        lineEdit_3->setMinimumSize(QSize(0, 43));
+        sectionEd = new QLineEdit(bumen);
+        sectionEd->setObjectName(QString::fromUtf8("sectionEd"));
+        sectionEd->setEnabled(false);
+        sizePolicy.setHeightForWidth(sectionEd->sizePolicy().hasHeightForWidth());
+        sectionEd->setSizePolicy(sizePolicy);
+        sectionEd->setMinimumSize(QSize(0, 43));
 
-        horizontalLayout_4->addWidget(lineEdit_3);
+        horizontalLayout_4->addWidget(sectionEd);
 
 
         verticalLayout->addWidget(bumen);
@@ -314,14 +314,14 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer_6);
 
-        lineEdit_4 = new QLineEdit(shijian);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-        lineEdit_4->setEnabled(false);
-        sizePolicy.setHeightForWidth(lineEdit_4->sizePolicy().hasHeightForWidth());
-        lineEdit_4->setSizePolicy(sizePolicy);
-        lineEdit_4->setMinimumSize(QSize(0, 43));
+        timeEd = new QLineEdit(shijian);
+        timeEd->setObjectName(QString::fromUtf8("timeEd"));
+        timeEd->setEnabled(false);
+        sizePolicy.setHeightForWidth(timeEd->sizePolicy().hasHeightForWidth());
+        timeEd->setSizePolicy(sizePolicy);
+        timeEd->setMinimumSize(QSize(0, 43));
 
-        horizontalLayout_5->addWidget(lineEdit_4);
+        horizontalLayout_5->addWidget(timeEd);
 
 
         verticalLayout->addWidget(shijian);
@@ -342,13 +342,13 @@ public:
         titleLb->setText(QCoreApplication::translate("FaceAttendance", "\344\272\272\350\204\270\350\257\206\345\210\253\350\200\203\345\213\244\347\263\273\347\273\237", nullptr));
         headLb->setText(QString());
         label_4->setText(QCoreApplication::translate("FaceAttendance", "\345\267\245\345\217\267", nullptr));
-        lineEdit->setText(QCoreApplication::translate("FaceAttendance", "001", nullptr));
+        employeeIDEd->setText(QCoreApplication::translate("FaceAttendance", "001", nullptr));
         label_5->setText(QCoreApplication::translate("FaceAttendance", "\345\247\223\345\220\215", nullptr));
-        lineEdit_2->setText(QString());
+        nameEd->setText(QString());
         label_6->setText(QCoreApplication::translate("FaceAttendance", "\351\203\250\351\227\250", nullptr));
-        lineEdit_3->setText(QString());
+        sectionEd->setText(QString());
         label_7->setText(QCoreApplication::translate("FaceAttendance", "\346\227\266\351\227\264", nullptr));
-        lineEdit_4->setText(QString());
+        timeEd->setText(QString());
     } // retranslateUi
 
 };

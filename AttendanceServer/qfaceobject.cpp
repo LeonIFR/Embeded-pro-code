@@ -42,5 +42,11 @@ int QFaceObject::face_query(cv::Mat &faceimage)
     simage.channels = faceimage.channels();
     float similarity = 0;
     int64_t faceid = this->fengineptr->Query(simage, &similarity);
+    if(similarity>0.5){
+        emit send_faceid(faceid);
+    }
+    else{
+        emit send_faceid(-1);
+    }
     return faceid;
 }

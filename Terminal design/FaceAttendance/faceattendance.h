@@ -23,10 +23,12 @@ public:
     // 定时器事件
     void timerEvent(QTimerEvent *e);
 
+
 private slots:
     void timer_connect();
     void stop_connect();
     void start_connect();
+    void recv_data();
 
 private:
     Ui::FaceAttendance *ui;
@@ -41,6 +43,8 @@ private:
     QTcpSocket msocket;
     QTimer mtimer;
 
+    // 标志是否是同一个人脸进入检测区域
+    int flag_faceSend;
 
 };
 #endif // FACEATTENDANCE_H
