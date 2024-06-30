@@ -28,6 +28,7 @@ FaceAttendance::FaceAttendance(QWidget *parent)
     // 启动定时器
     mtimer.start(5000);//每5s连接一次，直到连接成功
     flag_faceSend = 0;
+    ui->widgetLb->hide();
 }
 
 FaceAttendance::~FaceAttendance()
@@ -43,7 +44,8 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
     {
         cap.read(srcImage);
     }
-
+    // 把图片大小设与显示窗口一样大
+    cv::resize(srcImage,srcImage,Size(480,480));
 
     Mat grayImage;
     cvtColor(srcImage, grayImage, COLOR_BGR2GRAY);
@@ -57,7 +59,7 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
         Rect rect = faceRects.at(0);// 第一个人脸的矩形框
 
         // 移动人脸框（图片--QLabel）
-        ui->headpic->move(rect.x,rect.y);
+        ui->headpic->move(rect.x-rect.width/2,rect.y-rect.height/2);
 
         if(flag_faceSend > 2){
             // Mat 转换为能够发送的数据QByteArray
@@ -81,6 +83,10 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
             // 发送
             msocket.write(sendData);
             flag_faceSend = -2;
+
+            faceMat = srcImage(rect);
+            // 2. 通过样式显示
+            imwrite("./face.jpg",faceMat);
         }
         flag_faceSend++;
     }
@@ -91,8 +97,6 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
     }
 
 
-
-
     if(srcImage.data == nullptr) return;//没有采集到数据，return
 
     //opencv中的Mat文件（BGR）和Qt中的图像文件QImage(RGB)不一样，所以要转换。
@@ -101,12 +105,41 @@ void FaceAttendance::timerEvent(QTimerEvent *e)
 
     //ui中显示
     QPixmap mmp = QPixmap::fromImage(image);
+
     ui->videoLb->setPixmap(mmp);
+
+
+
 }
 
 void FaceAttendance::recv_data(){
-    QString msg = msocket.readAll();
-    qDebug()<<msg;
+    QByteArray array = msocket.readAll();
+    // Json文件解析
+    QJsonParseError err;
+    QJsonDocument doc = QJsonDocument::fromJson(array,&err);
+    if(err.error != QJsonParseError::NoError){
+        qDebug()<<"json数据错误";
+        return;
+    }
+    // {"employeeID":%1,"name":%2,"department":软件,"time":%3}
+    QJsonObject obj = doc.object();
+    QString employeeID = obj.value("employeeID").toString();
+    QString name = obj.value("name").toString();
+    QString department = obj.value("department").toString();
+    QString timestr = obj.value("time").toString();
+    ui->employeeIDEd->setText(employeeID);
+    ui->nameEd->setText(name);
+    ui->departmentEd->setText(department);
+    ui->timeEd->setText(timestr);
+
+    // 1. 直接显示/ 直接显示会显示一张正方形的图片
+//    QImage image(faceMat.data, faceMat.cols, faceMat.rows,faceMat.step1(),QImage::Format_RGB888);
+//    QPixmap mmp = QPixmap::fromImage(image);
+//    ui->headLb->setPixmap(mmp);
+    // 2. 通过样式显示/ 可以在圆环中显示
+    ui->headLb->setStyleSheet("border-radius:75px;border-image: url(./face.jpg);");
+
+    ui->widgetLb->show();// 显示认证成功标志
 }
 void FaceAttendance::timer_connect()
 {

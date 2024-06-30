@@ -26,7 +26,7 @@
     <property name="styleSheet">
      <string notr="true"/>
     </property>
-    <widget class="QWidget" name="widget_2" native="true">
+    <widget class="QWidget" name="widgetLb" native="true">
      <property name="geometry">
       <rect>
        <x>109</x>
@@ -129,7 +129,7 @@ background-color: rgba(255, 255, 255, 0);</string>
      </property>
     </widget>
     <zorder>videoLb</zorder>
-    <zorder>widget_2</zorder>
+    <zorder>widgetLb</zorder>
     <zorder>headpic</zorder>
    </widget>
    <widget class="QWidget" name="widget_4" native="true">
@@ -154,8 +154,6 @@ QWidget#titleLb{
 }
 QWidget#headLb{
 	border-radius:75px;
-
-
 }</string>
     </property>
     <widget class="QLabel" name="titleLb">
@@ -392,7 +390,7 @@ QLineEdit{
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="sectionEd">
+          <widget class="QLineEdit" name="departmentEd">
            <property name="enabled">
             <bool>false</bool>
            </property>

@@ -6,32 +6,70 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>787</width>
-    <height>511</height>
+    <width>872</width>
+    <height>505</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>AttendanceWin</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="picLb">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>481</width>
-      <height>481</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(85, 170, 255);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="showWidget">
+       <attribute name="title">
+        <string>考勤图像</string>
+       </attribute>
+       <widget class="QLabel" name="picLb">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>401</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(85, 170, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="RegisterWin" name="registerWidget">
+       <attribute name="title">
+        <string>注册</string>
+       </attribute>
+      </widget>
+      <widget class="SelectWin" name="selectWidget">
+       <attribute name="title">
+        <string>查询</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RegisterWin</class>
+   <extends>QWidget</extends>
+   <header location="global">registerwin.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SelectWin</class>
+   <extends>QWidget</extends>
+   <header location="global">selectwin.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

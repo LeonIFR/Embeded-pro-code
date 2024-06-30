@@ -6,6 +6,7 @@
 #include <QSqlQuery>
 #include <opencv.hpp>
 #include "registerwin.h"
+#include "selectwin.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,8 +15,8 @@ int main(int argc, char *argv[])
     qRegisterMetaType<cv::Mat>("cv::Mat&");
     qRegisterMetaType<cv::Mat>("cv::Mat");
     qRegisterMetaType<int64_t>("int64_t");
-    RegisterWin ww;
-    ww.show();
+//    RegisterWin ww;
+//    ww.show();
 
     // 连接数据库
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -36,7 +37,7 @@ onboardingTime text, address text, phone text, faceID interger unique, headfile 
         return -1;
     }
     //创建考勤表
-    createsql = "create table if not exists attandence (attendanceID integer primary key autoincrement, employeeID integer,\
+    createsql = "create table if not exists attendance (attendanceID integer primary key autoincrement, employeeID integer,\
 attendaceTime TimeStamp NOT NULL DEFAULT(datetime('now','localtime')))";
 
     if(!query.exec(createsql)){
@@ -44,9 +45,9 @@ attendaceTime TimeStamp NOT NULL DEFAULT(datetime('now','localtime')))";
         return -1;
     }
 
-
-
     AttendanceWin w;
     w.show();
+//    SelectWin sw;
+//    sw.show();
     return a.exec();
 }

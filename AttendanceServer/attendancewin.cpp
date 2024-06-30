@@ -8,7 +8,6 @@ AttendanceWin::AttendanceWin(QWidget *parent)
     , ui(new Ui::AttendanceWin)
 {
     ui->setupUi(this);
-
     // QTcpServer 当有客户端连接会发送newconnect
     connect(&mserver, &QTcpServer::newConnection, this, &AttendanceWin::accept_client);
     mserver.listen(QHostAddress::Any,9999);//监听，启动服务器
@@ -89,7 +88,7 @@ void AttendanceWin::read_data()
 void AttendanceWin::recv_faceid(int64_t faceid){
 
     if(faceid<0){
-        QString sdmsg = QString("{\"employeeID\":,\"name\": ,\"department\": ,\"time\": }");
+        QString sdmsg = QString("{\"employeeID\":\"\",\"name\":\"\",\"department\":\"\",\"time\":\"\"}");
         msocket->write(sdmsg.toUtf8());
         return;
     }
@@ -107,9 +106,21 @@ void AttendanceWin::recv_faceid(int64_t faceid){
                 .arg(record.value("employeeID").toString()).arg(record.value("name").toString())
                 .arg(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
         // 打包发送给客户端
-        msocket->write(sdmsg.toUtf8());
+        //msocket->write(sdmsg.toUtf8());
 
+        /*----------------写入部分----------------*/
         // 把数据写入数据库
 
+        QString insertSql = QString("insert into attendance(employeeID) values('%1')").arg(record.value("employeeID").toString());
+        QSqlQuery query;
+
+        if(!query.exec(insertSql)){
+            QString sdmsg = QString("{\"employeeID\":\"\",\"name\":\"\",\"department\": \"\",\"time\": \"\"}");
+            msocket->write(sdmsg.toUtf8());
+            return;
+        }
+        else{
+            msocket->write(sdmsg.toUtf8());
+        }
     }
 }

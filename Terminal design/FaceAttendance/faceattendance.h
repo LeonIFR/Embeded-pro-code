@@ -5,6 +5,9 @@
 #include <opencv.hpp>
 #include <QTcpSocket>
 #include <QTimer>
+#include <QJsonDocument>
+#include <QJsonParseError>
+#include <QJsonObject>
 
 using namespace cv;
 using namespace std;
@@ -45,6 +48,9 @@ private:
 
     // 标志是否是同一个人脸进入检测区域
     int flag_faceSend;
+
+    // 保存人脸的数据
+    cv::Mat faceMat;
 
 };
 #endif // FACEATTENDANCE_H

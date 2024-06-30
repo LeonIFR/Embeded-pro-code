@@ -26,7 +26,7 @@ class Ui_FaceAttendance
 public:
     QWidget *centralwidget;
     QWidget *widget;
-    QWidget *widget_2;
+    QWidget *widgetLb;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_2;
     QLabel *label;
@@ -53,7 +53,7 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_6;
     QSpacerItem *horizontalSpacer_5;
-    QLineEdit *sectionEd;
+    QLineEdit *departmentEd;
     QWidget *shijian;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_7;
@@ -71,17 +71,17 @@ public:
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(0, 0, 480, 480));
         widget->setStyleSheet(QString::fromUtf8(""));
-        widget_2 = new QWidget(widget);
-        widget_2->setObjectName(QString::fromUtf8("widget_2"));
-        widget_2->setGeometry(QRect(109, 329, 261, 81));
-        widget_2->setStyleSheet(QString::fromUtf8("background-color: rgba(49, 50, 54, 0.8);"));
-        horizontalLayout_2 = new QHBoxLayout(widget_2);
+        widgetLb = new QWidget(widget);
+        widgetLb->setObjectName(QString::fromUtf8("widgetLb"));
+        widgetLb->setGeometry(QRect(109, 329, 261, 81));
+        widgetLb->setStyleSheet(QString::fromUtf8("background-color: rgba(49, 50, 54, 0.8);"));
+        horizontalLayout_2 = new QHBoxLayout(widgetLb);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer_2);
 
-        label = new QLabel(widget_2);
+        label = new QLabel(widgetLb);
         label->setObjectName(QString::fromUtf8("label"));
         label->setMinimumSize(QSize(31, 30));
         label->setMaximumSize(QSize(31, 30));
@@ -90,7 +90,7 @@ public:
 
         horizontalLayout_2->addWidget(label);
 
-        label_2 = new QLabel(widget_2);
+        label_2 = new QLabel(widgetLb);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setStyleSheet(QString::fromUtf8("font: 25 20pt \"\345\276\256\350\275\257\351\233\205\351\273\221 Light\";\n"
 "color: rgb(255, 255, 255);\n"
@@ -110,7 +110,7 @@ public:
         videoLb->setObjectName(QString::fromUtf8("videoLb"));
         videoLb->setGeometry(QRect(0, 0, 480, 490));
         videoLb->raise();
-        widget_2->raise();
+        widgetLb->raise();
         headpic->raise();
         widget_4 = new QWidget(centralwidget);
         widget_4->setObjectName(QString::fromUtf8("widget_4"));
@@ -127,8 +127,6 @@ public:
 "}\n"
 "QWidget#headLb{\n"
 "	border-radius:75px;\n"
-"\n"
-"\n"
 "}"));
         titleLb = new QLabel(widget_4);
         titleLb->setObjectName(QString::fromUtf8("titleLb"));
@@ -269,14 +267,14 @@ public:
 
         horizontalLayout_4->addItem(horizontalSpacer_5);
 
-        sectionEd = new QLineEdit(bumen);
-        sectionEd->setObjectName(QString::fromUtf8("sectionEd"));
-        sectionEd->setEnabled(false);
-        sizePolicy.setHeightForWidth(sectionEd->sizePolicy().hasHeightForWidth());
-        sectionEd->setSizePolicy(sizePolicy);
-        sectionEd->setMinimumSize(QSize(0, 43));
+        departmentEd = new QLineEdit(bumen);
+        departmentEd->setObjectName(QString::fromUtf8("departmentEd"));
+        departmentEd->setEnabled(false);
+        sizePolicy.setHeightForWidth(departmentEd->sizePolicy().hasHeightForWidth());
+        departmentEd->setSizePolicy(sizePolicy);
+        departmentEd->setMinimumSize(QSize(0, 43));
 
-        horizontalLayout_4->addWidget(sectionEd);
+        horizontalLayout_4->addWidget(departmentEd);
 
 
         verticalLayout->addWidget(bumen);
@@ -346,7 +344,7 @@ public:
         label_5->setText(QCoreApplication::translate("FaceAttendance", "\345\247\223\345\220\215", nullptr));
         nameEd->setText(QString());
         label_6->setText(QCoreApplication::translate("FaceAttendance", "\351\203\250\351\227\250", nullptr));
-        sectionEd->setText(QString());
+        departmentEd->setText(QString());
         label_7->setText(QCoreApplication::translate("FaceAttendance", "\346\227\266\351\227\264", nullptr));
         timeEd->setText(QString());
     } // retranslateUi

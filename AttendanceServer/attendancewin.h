@@ -7,6 +7,7 @@
 #include <qfaceobject.h>
 #include <QSqlTableModel>
 #include <QSqlRecord>
+#include <QSqlQuery>
 #include <QDateTime>
 
 QT_BEGIN_NAMESPACE

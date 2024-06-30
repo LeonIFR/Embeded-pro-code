@@ -30,16 +30,19 @@ SOURCES += \
     main.cpp \
     attendancewin.cpp \
     qfaceobject.cpp \
-    registerwin.cpp
+    registerwin.cpp \
+    selectwin.cpp
 
 HEADERS += \
     attendancewin.h \
     qfaceobject.h \
-    registerwin.h
+    registerwin.h \
+    selectwin.h
 
 FORMS += \
     attendancewin.ui \
-    registerwin.ui
+    registerwin.ui \
+    selectwin.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
